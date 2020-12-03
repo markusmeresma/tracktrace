@@ -1,0 +1,20 @@
+﻿<Window x:Class="TrackTraceSystem.AddLocation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrackTraceSystem"
+        mc:Ignorable="d"
+        Title="AddLocation" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="26,23,0,0" TextWrapping="Wrap" Text="Add a new location" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblType" Content="Type (shop, cafe, etc)" HorizontalAlignment="Left" Margin="26,84,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtType" HorizontalAlignment="Left" Height="23" Margin="204,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="26,141,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="22" Margin="204,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="224,189,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="257" Margin="509,119,0,0" VerticalAlignment="Top" Width="241"/>
+        <TextBlock HorizontalAlignment="Left" Margin="509,84,0,0" TextWrapping="Wrap" Text="List of saved locations (IDs):" VerticalAlignment="Top" FontSize="14"/>
+
+    </Grid>
+</Window>
