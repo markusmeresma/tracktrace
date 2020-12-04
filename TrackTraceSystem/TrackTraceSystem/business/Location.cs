@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TrackTraceSystem.data;
 
@@ -60,6 +61,18 @@ namespace TrackTraceSystem.business
          * Methods
          */
 
+        //Validate location type
+        public static bool IsValidType(string _type)
+        {
+            //Location type might only contain letters (shop, cafe, etc)
+            return Regex.IsMatch(_type, @"^[a-zA-Z]+$");
+        }
 
+        //Validate location address
+        public static bool IsValidAddress(string _address)
+        {
+            //Address might contain only letters and numbers
+            return Regex.IsMatch(_address, @"^[a-zA-Z0-9_ ]+$");
+        }
     }
 }

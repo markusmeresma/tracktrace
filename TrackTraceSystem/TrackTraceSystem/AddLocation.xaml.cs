@@ -38,16 +38,33 @@ namespace TrackTraceSystem
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             //Validate here that type input is string, address might contain numbers (add a separate method for this to this class)
+            try
+            {
+                if (Location.IsValidType(txtType.Text) != true)
+                {
+                    throw new ArgumentException("Type must only contain letters");
+                }
+                else if (Location.IsValidAddress(txtAddress.Text) != true)
+                {
+                    throw new ArgumentException("Address must only contain numbers and letters");
+                }
+                else
+                {
+                    Location location = new Location(txtType.Text, txtAddress.Text);
+                    //Get access to the datalyer
+                    Store store = Store.Instance;
 
-            Location location = new Location(txtType.Text, txtAddress.Text);
-            //Get access to the datalyer
-            Store store = Store.Instance;
+                    //Save location in the system
+                    store.SaveLocation(location);
 
-            //Save location in the system
-            store.SaveLocation(location);
-
-            //Add location to the listbox
-            ListBox.Items.Add(location.Id);
+                    //Add location to the listbox
+                    ListBox.Items.Add(location.Type);
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             txtType.Text = String.Empty;
             txtAddress.Text = String.Empty;

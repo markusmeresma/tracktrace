@@ -18,16 +18,6 @@ namespace TrackTraceSystem.business
         //Constructor with arguments to instantiate User object
         public User(string _phoneNr)
         {
-            //Fix validation (add validation to .xaml.cs file)
-            try
-            {
-                //Look at the comments in AddIndividualWindow.xaml.cs
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Please insert a valid UK phone number (example: xxx)");
-            }
-
             id = store.GenerateUserId();
             phoneNr = _phoneNr;
         }
@@ -57,11 +47,32 @@ namespace TrackTraceSystem.business
          * Methods
          */
 
-        //NB! - Fix validation
-        //Validate UK phone number
-        private bool ValidateUKPhoneNr(string number)
+        //Validate UK mobile phone nr
+        public static bool IsValidUKPhoneNr(string _phoneNr)
         {
-            return Regex.Match(number, @"^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$", RegexOptions.IgnoreCase).Success;
+            /*
+             * Regex source https://stackoverflow.com/questions/25155970/validating-uk-phone-number-regex-c (Rahul Tripathi)
+             * Example phone nrs
+             * +447222555555
+             * +44 7222 555 555
+             * 07222 555 555
+             */
+
+            return Regex.IsMatch(_phoneNr, @"^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$");
+        }
+
+        //Validate mobile phone nr uniqueness for the system
+        public static bool IsUniquePhoneNr(string _phoneNr)
+        {
+            //Get access to the datalayer
+            Store store = Store.Instance;
+
+            //Return false if number exists in the system
+            if (store.CheckPhoneNrUniqueness(_phoneNr) != true)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
