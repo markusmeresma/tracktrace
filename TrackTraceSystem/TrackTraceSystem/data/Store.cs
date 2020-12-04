@@ -67,6 +67,32 @@ namespace TrackTraceSystem.data
             locations.Add(location);
         }
 
+        //Provide access to users in the system
+        public List<User> LoadUsers()
+        {
+            return users;
+        }
+
+        //Provide access to locations in the system
+        public List<Location> LoadLocations()
+        {
+            return locations;
+        }
+
+        //Check mobile phone nr uniqueness
+        public bool CheckPhoneNrUniqueness(string phoneNr)
+        {
+            foreach (User u in users)
+            {
+                if (u.PhoneNr.Equals(phoneNr) != false)
+                {
+                    //Return false if number is already in the system
+                    return false;
+                }
+            }
+            return true;
+        }
+
         
 
     }

@@ -7,12 +7,13 @@
         mc:Ignorable="d"
         Title="AddIndividualWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="lblPhoneNr" Content="Insert UK phone number for an individual" HorizontalAlignment="Left" Margin="21,59,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="txtPhoneNr" HorizontalAlignment="Left" Height="22" Margin="312,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"/>
-        <Button x:Name="btnSaveIndividual" Content="Save" HorizontalAlignment="Left" Margin="680,67,0,0" VerticalAlignment="Top" Width="75" Click="btnSaveIndividual_Click"/>
+        <Label x:Name="lblPhoneNr" Content="Insert UK mobile phone number for an individual" HorizontalAlignment="Left" Margin="21,59,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtPhoneNr" HorizontalAlignment="Left" Height="22" Margin="22,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311"/>
+        <Button x:Name="btnSaveIndividual" Content="Save" HorizontalAlignment="Left" Margin="22,130,0,0" VerticalAlignment="Top" Width="75" Click="btnSaveIndividual_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="21,22,0,0" TextWrapping="Wrap" Text="Add a new individual" VerticalAlignment="Top" Width="167" FontSize="16" FontWeight="Bold"/>
         <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="191" Margin="21,194,0,0" VerticalAlignment="Top" Width="338"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,155,0,0" TextWrapping="Wrap" Text="List of saved individuals (IDs):" VerticalAlignment="Top" Height="23" Width="355" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,166,0,0" TextWrapping="Wrap" Text="List of saved individuals:" VerticalAlignment="Top" Height="23" Width="355" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="478,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="208" FontSize="14"><Run Text="Mobile phone number formats in UK:"/><LineBreak/><Span Background="White" Foreground="#FF18191A" FontFamily="Helvetica-Bold"><Run/></Span><LineBreak/><Span Background="White" Foreground="#FF18191A" FontFamily="Helvetica-Bold"><Run Text="07 xxx"/></Span><Span Background="White" Foreground="#FF18191A" FontFamily="Helvetica"><Run Text=" xxx xxx"/></Span><LineBreak/><Run Foreground="#FF18191A" FontFamily="Helvetica" Text="+44 "/><Span Background="White" Foreground="#FF18191A" FontFamily="Helvetica-Bold"><Run Text="07xxx"/></Span><Span Background="White" Foreground="#FF18191A" FontFamily="Helvetica"><Run Text=" xxx xxx"/></Span></TextBlock>
 
     </Grid>
 </Window>

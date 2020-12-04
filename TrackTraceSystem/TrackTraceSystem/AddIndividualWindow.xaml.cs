@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,23 +25,81 @@ namespace TrackTraceSystem
         public AddIndividualWindow()
         {
             InitializeComponent();
+
+            //Get access to the datalayer
+            Store store = Store.Instance;
+            
+            //Populate ListBox to show users in the system
+            foreach (User u in store.LoadUsers())
+            {
+                ListBox.Items.Add(u.Id);
+            }
         }
 
         private void btnSaveIndividual_Click(object sender, RoutedEventArgs e)
         {
-            //Validate phone nr before calling constructor with arguments
+            //Remove all whitespace from the input
+            string _phoneNr = String.Concat(txtPhoneNr.Text.Where(c => !Char.IsWhiteSpace(c)));
 
-            User user = new User(txtPhoneNr.Text);
+            //Validate phone nr before saving user
+            try
+            {
+                if (IsValidUKPhoneNr(_phoneNr) != true)
+                {
+                    throw new System.ArgumentException("Please insert a valid UK mobile phone nr");
+                }
+                else if (IsUniquePhoneNr(_phoneNr) != true)
+                {
+                    throw new System.ArgumentException("Number already exists in the system");
+                }
+                else
+                {
+                    User user = new User(_phoneNr);
+                    //Get access to the datalayer
+                    Store store = Store.Instance;
+
+                    //Save user in the system
+                    store.SaveUser(user);
+
+                    //Add user's phone number to ListBox
+                    ListBox.Items.Add(user.PhoneNr);
+
+                    txtPhoneNr.Text = String.Empty;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            txtPhoneNr.Text = String.Empty;
+        }
+
+        //Validate UK mobile phone nr
+        private static bool IsValidUKPhoneNr(string number)
+        {
+            /*
+             * Regex source https://stackoverflow.com/questions/25155970/validating-uk-phone-number-regex-c (Rahul Tripathi)
+             * Example phone nrs
+             * +447222555555
+             * +44 7222 555 555
+             * 07222 555 555
+             */
+
+            return Regex.IsMatch(number, @"^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$");
+        }
+
+        //Validate mobile phone nr uniqueness for the system
+        private static bool IsUniquePhoneNr(string number)
+        {
             //Get access to the datalayer
             Store store = Store.Instance;
 
-            //Save user in the system
-            store.SaveUser(user);
-
-            //Add user's phone number to ListBox
-            ListBox.Items.Add(user.Id);
-
-            txtPhoneNr.Text = String.Empty;
+            //Return false if number is already in the system
+            if (store.CheckPhoneNrUniqueness(number) != true)
+            {
+                return false;
+            }
+            return true;
         }
 
        

@@ -33,7 +33,8 @@ namespace TrackTraceSystem
 
         private void btnAddLocation_Click(object sender, RoutedEventArgs e)
         {
-
+            AddLocation newWin = new AddLocation();
+            newWin.Show();
         }
     }
 }

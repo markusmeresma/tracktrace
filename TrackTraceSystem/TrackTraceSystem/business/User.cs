@@ -21,7 +21,7 @@ namespace TrackTraceSystem.business
             //Fix validation (add validation to .xaml.cs file)
             try
             {
-                
+                //Look at the comments in AddIndividualWindow.xaml.cs
             }
             catch (Exception e)
             {
