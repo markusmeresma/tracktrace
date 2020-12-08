@@ -13,11 +13,12 @@ namespace TrackTraceSystem.business
         private Guid id;
         private string type;
         private string address;
-        //Get access to the data layer
-        Store store = Store.Instance;
 
         public Location(string _type, string _address)
         {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
             type = _type;
             address = _address;
             id = store.GenerateLocationId();
@@ -73,6 +74,34 @@ namespace TrackTraceSystem.business
         {
             //Address might contain only letters and numbers
             return Regex.IsMatch(_address, @"^[a-zA-Z0-9_ ]+$");
+        }
+
+        //Save location in the system
+        public static void AddLocation(Location location)
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            //Save location to the list
+            store.SaveLocation(location);
+        }
+
+        //Access locations
+        public static List<Location> GetLocations()
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            return store.LoadLocations();
+        }
+
+        //Access a single location
+        public static Location GetLocation(string _address)
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            return store.GetLocation(_address);
         }
     }
 }

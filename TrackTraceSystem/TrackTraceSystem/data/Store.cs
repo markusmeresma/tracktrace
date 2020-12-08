@@ -18,6 +18,7 @@ namespace TrackTraceSystem.data
         private static Store instance;
         List<User> users = new List<User>();
         List<Location> locations = new List<Location>();
+        List<Visit> visits = new List<Visit>();
 
         private Store() { }
 
@@ -55,16 +56,52 @@ namespace TrackTraceSystem.data
             return id;
         }
 
+        //Generate unique id for each event
+        public Guid GenerateEventId()
+        {
+            Guid id = Guid.NewGuid();
+
+            return id;
+        }
+
         //Save user in the system
         public void SaveUser(User user)
         {
             users.Add(user);
         }
 
+        //get user from the list
+        public User GetUser(string _phoneNr)
+        {
+            //Linq query to get a user from the list
+            var querySingleUser = from user in users
+                                  where user.PhoneNr == _phoneNr
+                                  select user;
+
+            return querySingleUser.FirstOrDefault();
+        }
+
         //Save location in the system
         public void SaveLocation(Location location)
         {
             locations.Add(location);
+        }
+
+        //Get location from the list
+        public Location GetLocation(string _address)
+        {
+            //Linq query to get a location from the list
+            var querySingleLocation = from location in locations
+                                      where location.Address == _address
+                                      select location;
+
+            return querySingleLocation.FirstOrDefault();
+        }
+
+        //Save visit in the list
+        public void SaveVisit(Visit visit)
+        {
+            visits.Add(visit);
         }
 
         //Provide access to users in the system

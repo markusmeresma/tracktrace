@@ -36,5 +36,11 @@ namespace TrackTraceSystem
             AddLocation newWin = new AddLocation();
             newWin.Show();
         }
+
+        private void btnRecordVisit_Click(object sender, RoutedEventArgs e)
+        {
+            RecordVisitWindow newWin = new RecordVisitWindow();
+            newWin.Show();
+        }
     }
 }

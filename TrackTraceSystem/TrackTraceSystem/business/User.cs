@@ -13,11 +13,14 @@ namespace TrackTraceSystem.business
         //GUID represents a globally unique identifier
         private Guid id;
         private string phoneNr;
-        Store store = Store.Instance;
+        
 
         //Constructor with arguments to instantiate User object
         public User(string _phoneNr)
         {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
             id = store.GenerateUserId();
             phoneNr = _phoneNr;
         }
@@ -73,6 +76,34 @@ namespace TrackTraceSystem.business
                 return false;
             }
             return true;
+        }
+
+        //Save user to the list
+        public static void AddUser(User user)
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            //Save user in the users list
+            store.SaveUser(user);
+        }
+
+        //Access the list of users
+        public static List<User> GetUsers()
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            return store.LoadUsers();
+        }
+
+        //Access a single user
+        public static User GetUser(string _phoneNr)
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            return store.GetUser(_phoneNr);
         }
     }
 }

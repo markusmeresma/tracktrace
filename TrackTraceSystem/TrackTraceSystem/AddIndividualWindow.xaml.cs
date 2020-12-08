@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TrackTraceSystem.business;
-using TrackTraceSystem.data;
 
 namespace TrackTraceSystem
 {
@@ -25,12 +24,9 @@ namespace TrackTraceSystem
         public AddIndividualWindow()
         {
             InitializeComponent();
-
-            //Get access to the datalayer
-            Store store = Store.Instance;
             
             //Populate ListBox to show users in the system
-            foreach (User u in store.LoadUsers())
+            foreach (User u in User.GetUsers())
             {
                 ListBox.Items.Add(u.PhoneNr);
             }
@@ -57,11 +53,8 @@ namespace TrackTraceSystem
                     //Create user
                     User user = new User(_phoneNr);
 
-                    //Get access to the datalayer
-                    Store store = Store.Instance;
-
-                    //Save user in the system
-                    store.SaveUser(user);
+                    //Add user to the system
+                    User.AddUser(user);
 
                     //Add user's phone number to ListBox
                     ListBox.Items.Add(user.PhoneNr);

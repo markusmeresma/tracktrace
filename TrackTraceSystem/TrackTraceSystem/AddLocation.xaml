@@ -14,7 +14,7 @@
         <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="22" Margin="204,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="224,189,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
         <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="257" Margin="509,119,0,0" VerticalAlignment="Top" Width="241"/>
-        <TextBlock HorizontalAlignment="Left" Margin="509,84,0,0" TextWrapping="Wrap" Text="List of saved locations (IDs):" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="509,84,0,0" TextWrapping="Wrap" Text="List of saved locations (types):" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>
