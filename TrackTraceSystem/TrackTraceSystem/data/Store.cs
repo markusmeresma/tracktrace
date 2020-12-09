@@ -10,7 +10,7 @@ namespace TrackTraceSystem.data
     class Store
     {
         /*
-         * This class implements a store for the data layer using Singleton design pattern to ensure that only one instance is created
+         * This class implements store from the data layer using Singleton design pattern to ensure that only one instance is created
          */
 
         //Singleton code
@@ -110,6 +110,12 @@ namespace TrackTraceSystem.data
         public void SaveContact(Contact contact)
         {
             contacts.Add(contact);
+        }
+
+        //Provide access to contacts in the system
+        public List<Contact> LoadContacts()
+        {
+            return contacts;
         }
 
         //Provide access to users in the system

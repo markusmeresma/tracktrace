@@ -48,5 +48,11 @@ namespace TrackTraceSystem
             RecordContactWindow newWin = new RecordContactWindow();
             newWin.Show();
         }
+
+        private void btnGenerateContactList_Click(object sender, RoutedEventArgs e)
+        {
+            GenerateContactListWindow newWin = new GenerateContactListWindow();
+            newWin.Show();
+        }
     }
 }
