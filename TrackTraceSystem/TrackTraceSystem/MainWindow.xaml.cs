@@ -42,5 +42,11 @@ namespace TrackTraceSystem
             RecordVisitWindow newWin = new RecordVisitWindow();
             newWin.Show();
         }
+
+        private void btnRecordContact_Click(object sender, RoutedEventArgs e)
+        {
+            RecordContactWindow newWin = new RecordContactWindow();
+            newWin.Show();
+        }
     }
 }

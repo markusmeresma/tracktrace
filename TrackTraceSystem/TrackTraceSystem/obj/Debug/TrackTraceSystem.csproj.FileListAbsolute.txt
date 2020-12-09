@@ -19,3 +19,5 @@ C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\ob
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\AddLocation.baml
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\RecordVisitWindow.g.cs
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\RecordVisitWindow.baml
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\RecordContactWindow.g.cs
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\RecordContactWindow.baml

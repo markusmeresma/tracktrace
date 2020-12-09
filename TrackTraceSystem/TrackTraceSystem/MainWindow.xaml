@@ -11,6 +11,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Welcome to Track and Trace System Prototype" VerticalAlignment="Top" Height="43" Width="532" FontSize="24"/>
         <Button x:Name="btnAddLocation" Content="Add location" HorizontalAlignment="Left" Margin="308,126,0,0" VerticalAlignment="Top" Width="133" Height="32" FontWeight="Bold" Click="btnAddLocation_Click"/>
         <Button x:Name="btnRecordVisit" Content="Record Visit" HorizontalAlignment="Left" Margin="308,188,0,0" VerticalAlignment="Top" Width="133" Height="32" FontWeight="Bold" Click="btnRecordVisit_Click"/>
+        <Button x:Name="btnRecordContact" Content="Record Contact" HorizontalAlignment="Left" Margin="308,246,0,0" VerticalAlignment="Top" Width="133" Height="32" Click="btnRecordContact_Click" FontWeight="Bold"/>
 
     </Grid>
 </Window>
