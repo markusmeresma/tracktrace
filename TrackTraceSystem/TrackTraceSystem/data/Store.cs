@@ -16,9 +16,11 @@ namespace TrackTraceSystem.data
         //Singleton code
         //Holds a reference to the only Store object
         private static Store instance;
+
         List<User> users = new List<User>();
         List<Location> locations = new List<Location>();
         List<Visit> visits = new List<Visit>();
+        List<Contact> contacts = new List<Contact>();
 
         private Store() { }
 
@@ -102,6 +104,12 @@ namespace TrackTraceSystem.data
         public void SaveVisit(Visit visit)
         {
             visits.Add(visit);
+        }
+
+        //Save contact in the list
+        public void SaveContact(Contact contact)
+        {
+            contacts.Add(contact);
         }
 
         //Provide access to users in the system

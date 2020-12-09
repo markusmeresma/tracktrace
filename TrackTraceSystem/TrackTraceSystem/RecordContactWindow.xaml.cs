@@ -28,7 +28,53 @@ namespace TrackTraceSystem
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                if (Contact.ValidateDate(txtDate.Text) != true)
+                {
+                    throw new ArgumentException("Invalid date");
+                }
+                else if (Contact.ValidateTime(txtTime.Text) != true)
+                {
+                    throw new ArgumentException("Invalid time");
+                }
+                else
+                {
+                    //Create individual 1
+                    User user1 = User.GetUser(txtContactIndividual1.Text);
 
+                    //Create individual 2
+                    User user2 = User.GetUser(txtContactIndividual2.Text);
+
+                    //Create a contact between individuals
+                    Contact contact = new Contact(user1, user2);
+
+                    string dateTimeString = String.Concat(txtDate.Text, " ", txtTime.Text);
+
+                    //Add date and time to contact
+                    contact.DateTime = DateTime.Parse(dateTimeString);
+
+                    //Record contact
+                    Contact.RecordContact(contact);
+
+                    //Display details
+                    MessageBox.Show(contact.ToString() + "\n" +
+                        "Individual 1" + "\n" +
+                        "ID: " + user1.Id + "\n" +
+                        "Phone nr: " + user1.PhoneNr + "\n" +
+                        "Individual 2" + "\n" +
+                        "ID: " + user2.Id + "\n" +
+                        "Phone nr: " + user2.PhoneNr + "\n");
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            txtContactIndividual1.Text = String.Empty;
+            txtContactIndividual2.Text = String.Empty;
+            txtDate.Text = String.Empty;
+            txtTime.Text = String.Empty;
         }
 
         private void contactIndividual1ListBox_GetUsers()
@@ -52,11 +98,12 @@ namespace TrackTraceSystem
 
         private void contactIndividual1ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Clear contactIndividual2ListBox if there was any data
-            contactIndividual2ListBox.Items.Clear();
             //Clear contactIndividual2 textbox if there was any data
             txtContactIndividual2.Text = String.Empty;
 
+            //Clear contactIndividual2ListBox if there was any data
+            contactIndividual2ListBox.Items.Clear();
+            
             txtContactIndividual1.Text = contactIndividual1ListBox.SelectedItem.ToString();
 
             //Change contacts available in contactIndividual2ListBox based on selected contact
@@ -65,8 +112,11 @@ namespace TrackTraceSystem
 
         private void contactIndividual2ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //is not handeling null 
-            txtContactIndividual2.Text = contactIndividual2ListBox.SelectedItem.ToString();
+            //Handle null reference
+            if (contactIndividual2ListBox.SelectedItem != null)
+            {
+                txtContactIndividual2.Text = contactIndividual2ListBox.SelectedItem.ToString();
+            }
         }
     }
 }

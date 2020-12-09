@@ -53,5 +53,24 @@ namespace TrackTraceSystem.business
 
             return availableContacts;
         }
+
+        //Save contact in the system
+        public static void RecordContact(Contact contact)
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
+
+            store.SaveContact(contact);
+        }
+
+        public override string ToString()
+        {
+            string contactString =
+                "Details of recorded contact: " + "\n" +
+                "Contact ID: " + Id + "\n" +
+                "Contact date&time: " + DateTime + "\n";
+
+            return contactString;
+        }
     }
 }
