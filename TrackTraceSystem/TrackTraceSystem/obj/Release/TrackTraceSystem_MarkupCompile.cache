@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Release\
 TrackTraceSystem
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\App.xaml
 61152161101
 
