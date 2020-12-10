@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TrackTraceSystem.business;
+using TrackTraceSystem.data;
 
 namespace TrackTraceSystem
 {
@@ -28,7 +30,7 @@ namespace TrackTraceSystem
 
         private void btnGenerate_Click(object sender, RoutedEventArgs e)
         {
-            specifiedLocationListBox.Items.Clear();
+            listOfVisitorsListBox.Items.Clear();
 
             try
             {
@@ -56,10 +58,24 @@ namespace TrackTraceSystem
                     string startDateTimeString = String.Concat(txtStartDate.Text, " ", txtStartTime.Text);
                     string endDateTimeString = String.Concat(txtEndDate.Text, " ", txtEndTime.Text);
 
-                    DateTime specifiedStartDateTime = DateTime.Parse(startDateTimeString);
-                    DateTime specifiedEndDateTime = DateTime.Parse(endDateTimeString);
+                    DateTime specifiedStartDateTime = DateTime.ParseExact(startDateTimeString, "dd/MM/yyyy HH:mm", CultureInfo.CreateSpecificCulture("en-GB"));
+                    DateTime specifiedEndDateTime = DateTime.ParseExact(endDateTimeString, "dd/MM/yyyy HH:mm", CultureInfo.CreateSpecificCulture("en-GB"));
 
-                    //Call IsStartDateBeforeEndDate here
+                    //Check if start date is before end date
+                    IsStartDateBeforeEndDate(specifiedStartDateTime, specifiedEndDateTime);
+
+                    ListGenerator generateVisitorsListForSpecifiedLocation = new ListGenerator();
+
+                    foreach (User u in generateVisitorsListForSpecifiedLocation.visitorsBetweenDates(specifiedLocation, specifiedStartDateTime, specifiedEndDateTime))
+                    {
+                        listOfVisitorsListBox.Items.Add(u.PhoneNr);
+                    }
+
+                    //Display message if no visitors found
+                    if (listOfVisitorsListBox.Items.Count == 0)
+                    {
+                        MessageBox.Show("No visitors found");
+                    }
                 }
             }
             catch (ArgumentException ex)
@@ -83,7 +99,17 @@ namespace TrackTraceSystem
 
         private void IsStartDateBeforeEndDate(DateTime startDate, DateTime endDate)
         {
-            //add try..catch block here
+            try
+            {
+                if (startDate > endDate)
+                {
+                    throw new System.ArgumentException("Start date cannot be after end date");
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

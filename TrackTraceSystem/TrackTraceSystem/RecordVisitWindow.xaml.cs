@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,11 +54,12 @@ namespace TrackTraceSystem
                     string dateTimeString = String.Concat(txtDate.Text, " ", txtTime.Text);
 
                     //Add date and time to DateTime struct
-                    visit.DateTime = DateTime.Parse(dateTimeString);
+                    visit.DateTime = DateTime.ParseExact(dateTimeString, "dd/MM/yyyy HH:mm", CultureInfo.CreateSpecificCulture("en-GB"));
 
                     Visit.RecordVisit(visit);
 
                     //Show recorded visit details
+                    //NB! Date is displayed in US format
                     MessageBox.Show(visit.ToString() + "User ID: " + user1.Id + "\n" + "Phone nr: " + user1.PhoneNr);
                 }
             }

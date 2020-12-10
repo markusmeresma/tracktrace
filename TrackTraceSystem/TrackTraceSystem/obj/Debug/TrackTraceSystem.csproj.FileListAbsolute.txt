@@ -23,3 +23,5 @@ C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\ob
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\RecordContactWindow.baml
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\GenerateContactListWindow.g.cs
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\GenerateContactListWindow.baml
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\GenerateVisitorsListWindow.g.cs
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\obj\Debug\GenerateVisitorsListWindow.baml

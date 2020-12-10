@@ -49,9 +49,12 @@ namespace TrackTraceSystem.data
 
             foreach (Visit v in store.LoadVisits())
             {
-                if (v.VisitLocation.Id == location.Id && v.DateTime >= startDate && v.DateTime <= endDate)
+                if (v.VisitLocation.Id == location.Id)
                 {
-                    listForVisitorsBetweenTwoDates.Add(v.Individual);
+                    if (v.DateTime >= startDate && v.DateTime <= endDate)
+                    {
+                        listForVisitorsBetweenTwoDates.Add(v.Individual);
+                    }
                 }
             }
 

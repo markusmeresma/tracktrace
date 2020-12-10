@@ -60,6 +60,9 @@
     <Compile Include="GenerateContactListWindow.xaml.cs">
       <DependentUpon>GenerateContactListWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GenerateVisitorsListWindow.xaml.cs">
+      <DependentUpon>GenerateVisitorsListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RecordContactWindow.xaml.cs">
       <DependentUpon>RecordContactWindow.xaml</DependentUpon>
     </Compile>
@@ -75,6 +78,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GenerateContactListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GenerateVisitorsListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

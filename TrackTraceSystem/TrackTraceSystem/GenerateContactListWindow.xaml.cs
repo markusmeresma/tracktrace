@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +51,7 @@ namespace TrackTraceSystem
                     //Get specified date and time
                     string dateTimeString = String.Concat(txtDate.Text, " ", txtTime.Text);
 
-                    DateTime specifiedDateTime = DateTime.Parse(dateTimeString); 
+                    DateTime specifiedDateTime = DateTime.ParseExact(dateTimeString, "dd/MM/yyyy HH:mm", CultureInfo.CreateSpecificCulture("en-GB")); 
 
                     ListGenerator generateContactListForSpecifiedUser = new ListGenerator();
 
