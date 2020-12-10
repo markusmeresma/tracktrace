@@ -110,7 +110,7 @@ namespace TrackTraceSystem.business
         public string UserToCSV()
         {
             string csvRow =
-                Id + "," + PhoneNr + "\n";
+                Id + "," + PhoneNr;
 
             return csvRow; 
         }

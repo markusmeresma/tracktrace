@@ -72,5 +72,14 @@ namespace TrackTraceSystem.business
 
             return contactString;
         }
+
+        //Contact to csv
+        public string ContactToCSV()
+        {
+            string csvRow =
+                base.EventToCSV() + OtherIndividual;
+
+            return csvRow;
+        }
     }
 }

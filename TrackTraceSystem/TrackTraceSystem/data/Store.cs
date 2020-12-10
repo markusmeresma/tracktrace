@@ -107,12 +107,14 @@ namespace TrackTraceSystem.data
         public void SaveVisit(Visit visit)
         {
             visits.Add(visit);
+            csvHandler.writeVisitsToCSV(visit);
         }
 
         //Save contact in the list
         public void SaveContact(Contact contact)
         {
             contacts.Add(contact);
+            csvHandler.writeContactsToCSV(contact);
         }
 
         //Provide access to contacts in the system

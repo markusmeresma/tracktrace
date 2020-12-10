@@ -108,7 +108,7 @@ namespace TrackTraceSystem.business
         public string LocationToCSV()
         {
             string csvRow =
-                Id + "," + Type + "," + Address + "\n";
+                Id + "," + Type + "," + Address;
 
             return csvRow;
         }

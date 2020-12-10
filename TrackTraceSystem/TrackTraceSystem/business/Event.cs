@@ -80,5 +80,14 @@ namespace TrackTraceSystem.business
 
             return Regex.IsMatch(_time, @"^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$");
         }
+
+        //Event to csv
+        public string EventToCSV()
+        {
+            string csvRow =
+                Id + "," + DateTime + "," + Individual + ",";
+
+            return csvRow;
+        }
     }
 }

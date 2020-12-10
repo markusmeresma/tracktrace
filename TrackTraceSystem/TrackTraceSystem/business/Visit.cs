@@ -52,5 +52,14 @@ namespace TrackTraceSystem.business
 
             return visitString;
         }
+
+        //Visit to csv
+        public string VisitToCSV()
+        {
+            string csvRow =
+                base.EventToCSV() + visitLocation;
+
+            return csvRow;
+        }
     }
 }

@@ -10,6 +10,10 @@ namespace TrackTraceSystem.data
 {
     class CSVHandler
     {
+        /*
+         * The file path is from C drive as the program was written on windows virtual machine (vmware)
+         */
+
         private const string usersFile = @"C:\Users\Markus Meresma\users.csv";
         private string usersHEADER = "id,PhoneNr";
 
@@ -70,6 +74,11 @@ namespace TrackTraceSystem.data
             }
         }
 
+        /*
+         * Methods
+         */
+
+        //User to csv
         public void writeUserToCSV(User user)
         {
             using (StreamWriter userWriter = new StreamWriter(usersFile, true))
@@ -78,11 +87,30 @@ namespace TrackTraceSystem.data
             }
         }
 
+        //Location to csv
         public void writeLocationToCSV(Location location)
         {
             using (StreamWriter locationWriter = new StreamWriter(locationsFile, true))
             {
                 locationWriter.WriteLine(location.LocationToCSV());
+            }
+        }
+
+        //Contact to csv
+        public void writeContactsToCSV(Contact contact)
+        {
+            using (StreamWriter contactsWriter = new StreamWriter(contactsFile, true))
+            {
+                contactsWriter.WriteLine(contact.ContactToCSV());
+            }
+        }
+
+        //Visit to csv
+        public void writeVisitsToCSV(Visit visit)
+        {
+            using (StreamWriter visitsWriter = new StreamWriter(visitsFile, true))
+            {
+                visitsWriter.WriteLine(visit.VisitToCSV());
             }
         }
     }
