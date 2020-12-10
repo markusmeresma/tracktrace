@@ -103,5 +103,14 @@ namespace TrackTraceSystem.business
 
             return store.GetLocation(_address);
         }
+
+        //Location to csv
+        public string LocationToCSV()
+        {
+            string csvRow =
+                Id + "," + Type + "," + Address + "\n";
+
+            return csvRow;
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace TrackTraceSystem.data
         List<Location> locations = new List<Location>();
         List<Visit> visits = new List<Visit>();
         List<Contact> contacts = new List<Contact>();
+        CSVHandler csvHandler = new CSVHandler();
 
         private Store() { }
 
@@ -70,6 +71,7 @@ namespace TrackTraceSystem.data
         public void SaveUser(User user)
         {
             users.Add(user);
+            csvHandler.writeUserToCSV(user);
         }
 
         //get user from the list
@@ -87,6 +89,7 @@ namespace TrackTraceSystem.data
         public void SaveLocation(Location location)
         {
             locations.Add(location);
+            csvHandler.writeLocationToCSV(location);
         }
 
         //Get location from the list

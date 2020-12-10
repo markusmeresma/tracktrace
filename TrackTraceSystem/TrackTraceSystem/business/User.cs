@@ -105,5 +105,14 @@ namespace TrackTraceSystem.business
 
             return store.GetUser(_phoneNr);
         }
+
+        //User to csv
+        public string UserToCSV()
+        {
+            string csvRow =
+                Id + "," + PhoneNr + "\n";
+
+            return csvRow; 
+        }
     }
 }
