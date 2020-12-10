@@ -39,6 +39,24 @@ namespace TrackTraceSystem.data
             return listForContactsAfterSpecifiedDate;
         }
 
+        //Get visitors list between two dates
+        public List<User> visitorsBetweenDates(Location location, DateTime startDate, DateTime endDate)
+        {
+            //Get access to the data layer
+            Store store = Store.Instance;
 
+            List<User> listForVisitorsBetweenTwoDates = new List<User>();
+
+            foreach (Visit v in store.LoadVisits())
+            {
+                if (v.VisitLocation.Id == location.Id && v.DateTime >= startDate && v.DateTime <= endDate)
+                {
+                    listForVisitorsBetweenTwoDates.Add(v.Individual);
+                }
+            }
+
+            return listForVisitorsBetweenTwoDates;
+
+        }
     }
 }

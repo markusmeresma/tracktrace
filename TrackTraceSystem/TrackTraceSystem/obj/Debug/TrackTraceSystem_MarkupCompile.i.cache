@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystem\App.xaml
-61152161101
+7-430874353
 
-18643149753
+19337205647
 13-1505183044
-AddIndividualWindow.xaml;AddLocation.xaml;GenerateContactListWindow.xaml;MainWindow.xaml;RecordContactWindow.xaml;RecordVisitWindow.xaml;
+AddIndividualWindow.xaml;AddLocation.xaml;GenerateContactListWindow.xaml;GenerateVisitorsListWindow.xaml;MainWindow.xaml;RecordContactWindow.xaml;RecordVisitWindow.xaml;
 
 True
 

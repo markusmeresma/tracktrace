@@ -11,14 +11,13 @@
         <Label x:Name="lblSpecifiedIndividual" Content="Select individual from the list below" HorizontalAlignment="Left" Margin="27,80,0,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox x:Name="txtSpecifiedIndividual" HorizontalAlignment="Left" Height="22" Margin="44,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" IsReadOnly="True"/>
         <ListBox x:Name="specifiedIndividualListBox" HorizontalAlignment="Left" Height="231" Margin="44,160,0,0" VerticalAlignment="Top" Width="201" SelectionChanged="specifiedIndividualListBox_SelectionChanged"/>
-        <Label x:Name="lblDate" Content="Insert date dd/mm/yyyy&#xA;" HorizontalAlignment="Left" Margin="319,80,0,0" VerticalAlignment="Top" FontSize="14" Height="31"/>
-        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Height="23" Margin="337,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblTime" Content="Insert time HH:MM (24-hour format)" HorizontalAlignment="Left" Margin="287,160,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="txtTime" HorizontalAlignment="Left" Height="22" Margin="337,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblDate" Content="Insert date dd/mm/yyyy&#xA;" HorizontalAlignment="Left" Margin="280,78,0,0" VerticalAlignment="Top" FontSize="14" Height="30"/>
+        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Height="23" Margin="299,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblTime" Content="Insert time HH:MM (24-hour format)" HorizontalAlignment="Left" Margin="280,160,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtTime" HorizontalAlignment="Left" Height="22" Margin="299,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ListBox x:Name="listOfContactsListBox" HorizontalAlignment="Left" Height="311" Margin="537,80,0,0" VerticalAlignment="Top" Width="232"/>
-        <TextBlock x:Name="lblListOfContacts" HorizontalAlignment="Left" Margin="500,56,0,0" TextWrapping="Wrap" Text="List of contacts after specified date and time:" VerticalAlignment="Top" Width="285" FontSize="14"/>
-        <Button x:Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="359,330,0,0" VerticalAlignment="Top" Width="75" Click="btnGenerate_Click"/>
-        <Button Content="Write to CSV" HorizontalAlignment="Left" Margin="359,371,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="lblListOfContacts" HorizontalAlignment="Left" Margin="500,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontSize="14"><Run Text="List of contacts after specified date and time:"/></TextBlock>
+        <Button x:Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="299,244,0,0" VerticalAlignment="Top" Width="75" Click="btnGenerate_Click"/>
 
     </Grid>
 </Window>

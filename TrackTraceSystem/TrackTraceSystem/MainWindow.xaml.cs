@@ -54,5 +54,11 @@ namespace TrackTraceSystem
             GenerateContactListWindow newWin = new GenerateContactListWindow();
             newWin.Show();
         }
+
+        private void btnGenerateVisitorsList_Click(object sender, RoutedEventArgs e)
+        {
+            GenerateVisitorsListWindow newWin = new GenerateVisitorsListWindow();
+            newWin.Show();
+        }
     }
 }

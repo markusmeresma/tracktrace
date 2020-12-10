@@ -118,6 +118,12 @@ namespace TrackTraceSystem.data
             return contacts;
         }
 
+        //Provide access to visits in the system
+        public List<Visit> LoadVisits()
+        {
+            return visits;
+        }
+
         //Provide access to users in the system
         public List<User> LoadUsers()
         {
