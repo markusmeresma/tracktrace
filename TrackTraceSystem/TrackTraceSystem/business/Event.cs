@@ -85,7 +85,7 @@ namespace TrackTraceSystem.business
         public string EventToCSV()
         {
             string csvRow =
-                Id + "," + DateTime + "," + Individual + ",";
+                Id + "," + DateTime + "," + Individual.Id + "," + Individual.PhoneNr + ",";
 
             return csvRow;
         }

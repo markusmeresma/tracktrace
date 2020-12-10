@@ -21,10 +21,10 @@ namespace TrackTraceSystem.data
         private string locationsHEADER = "id,type,address";
 
         private const string contactsFile = @"C:\Users\Markus Meresma\contacts.csv";
-        private string contactsHEADER = "id,datetime,user1,user2";
+        private string contactsHEADER = "id,datetime,user1 id,user1 phoneNr,user2 id,user2 phoneNr";
 
         private const string visitsFile = @"C:\Users\Markus Meresma\visits.csv";
-        private string visitsHEADER = "id,datetime,user,location";
+        private string visitsHEADER = "id,datetime,user id,user phoneNr,address,type";
 
         //Constructor to delete files if they exist and create new files
         public CSVHandler()
