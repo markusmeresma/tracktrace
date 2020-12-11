@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Author: Markus Meresma
+ * Date last modified: 10.12.2020
+ * Description of the role of the class:
+ * This is a unit test which tests phone nr validation methods in User class
+ */
+
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TrackTraceSystem.business;
 
