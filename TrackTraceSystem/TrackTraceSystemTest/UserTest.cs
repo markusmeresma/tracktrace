@@ -30,13 +30,15 @@ namespace TrackTraceSystemTest
         {
             //Arrange
             string mobilePhoneNr_1 = "+447222555555";
-            bool expected = false;
+            string mobilePhoneNr_2 = "+447123456789";
+            bool expected = true;
             User testUser = new User(mobilePhoneNr_1);
 
             //Act
-            bool actual = User.IsUniquePhoneNr(mobilePhoneNr_1);
+            bool actual = User.IsUniquePhoneNr(mobilePhoneNr_2);
 
             //Assert
-            Assert.AreEqual(expected, actual, "Phone nr uniqueness not validated correctly");        }
+            Assert.AreEqual(expected, actual, "Phone nr uniqueness not validated correctly");        
+        }
     }
 }
