@@ -82,6 +82,10 @@ namespace TrackTraceSystem
             {
                 MessageBox.Show(ex.Message);
             }
+            txtStartDate.Text = String.Empty;
+            txtEndDate.Text = String.Empty;
+            txtStartTime.Text = String.Empty;
+            txtEndTime.Text = String.Empty;
         }
 
         private void locationListBox_GetLocations()
