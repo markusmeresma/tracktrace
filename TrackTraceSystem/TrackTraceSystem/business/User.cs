@@ -8,7 +8,7 @@ using TrackTraceSystem.data;
 
 namespace TrackTraceSystem.business
 {
-    class User
+    public class User
     {
         //GUID represents a globally unique identifier
         private Guid id;

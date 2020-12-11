@@ -1,0 +1,17 @@
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\TrackTraceSystemTest.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\TrackTraceSystemTest.pdb
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\TrackTraceSystem.exe
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\TrackTraceSystem.pdb
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\TrackTraceSystem.exe.config
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\obj\Debug\TrackTraceSystemTest.csprojAssemblyReference.cache
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\obj\Debug\TrackTraceSystemTest.csproj.CoreCompileInputs.cache
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\obj\Debug\TrackTraceSystemTest.csproj.CopyComplete
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\obj\Debug\TrackTraceSystemTest.dll
+C:\Users\Markus Meresma\Projects\tracktrace\TrackTraceSystem\TrackTraceSystemTest\obj\Debug\TrackTraceSystemTest.pdb
