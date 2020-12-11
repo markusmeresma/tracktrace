@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Author: Markus Meresma
+ * Date last modified: 10.12.2020
+ * Description of the role of the class:
+ * CSVHandler is used to write objects to csv files
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

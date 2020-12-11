@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Author: Markus Meresma
+ * Date last modified: 10.12.2020
+ * Description of the role of the class:
+ * User class implements individuals in the system. Each individual has a unique ID number and a phone number.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

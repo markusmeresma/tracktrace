@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Author: Markus Meresma
+ * Date last modified: 10.12.2020
+ * Description of the role of the class:
+ * Visit class inherits from the Event class and implements visits to a location
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

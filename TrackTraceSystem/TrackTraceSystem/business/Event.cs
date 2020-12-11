@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Author: Markus Meresma
+ * Date last modified: 10.12.2020
+ * Description of the role of the class:
+ * Event class is an abstract class which means that it cannot be instantiated. It is a parent class for contact and visit classes. 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

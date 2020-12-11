@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Author: Markus Meresma
+ * Date last modified: 10.12.2020
+ * Description of the role of the class:
+ * Store class provides a data store and implements Singleton design pattern. This class provides a static instance to save objects in the lists.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
